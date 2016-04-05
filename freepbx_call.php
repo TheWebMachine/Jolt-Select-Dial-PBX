@@ -15,7 +15,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// load FreeBPX bootstrap environment, requires FreePBX 2.9 to 12
+// load FreeBPX bootstrap environment, requires FreePBX 2.9+
 if (!@include_once(getenv('FREEPBX_CONF') ? getenv('FREEPBX_CONF') : '/etc/freepbx.conf')) {
 	include_once('/etc/asterisk/freepbx.conf');
 }
