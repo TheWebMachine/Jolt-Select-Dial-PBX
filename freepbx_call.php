@@ -6,6 +6,11 @@
  * This script is a compliment to the project at: 
  *  https://github.com/Jolt1/Jolt-Select-Dial-PBX
  *
+ * Instructions:
+ *      Place a copy of this file in the same place as the call.php file
+ *      from the Jolt repo. Modify the Jolt extension URL to call this file
+ *      i.e.  http://pbx_address/freepbx_call.php
+ *
  * License:
  *    The original MIT license terms apply
  *  
