@@ -57,7 +57,7 @@ $number = filter_var($number, FILTER_SANITIZE_NUMBER_INT);
 $number = preg_replace("/[^0-9,.]/", "", $number);
 
 // Get a 2D array of all FreePBX extension details
-$extension_array = core_users_list();
+$extension_array = core_users_list();          // TODO: this line is broken in FreePBX 14
 
 // Convert the 2d array to a 1d array of just extension numbers
 foreach ($extension_array as $bar) {
