@@ -56,8 +56,9 @@ elseif (isset($_GET['phone'])) {
 $number = filter_var($number, FILTER_SANITIZE_NUMBER_INT);
 $number = preg_replace("/[^0-9,.]/", "", $number);
 
+/**** THIS IS BROKEN IN FreePBX 14 ****
 // Get a 2D array of all FreePBX extension details
-$extension_array = core_users_list();          // TODO: this line is broken in FreePBX 14
+$extension_array = core_users_list();         
 
 // Convert the 2d array to a 1d array of just extension numbers
 foreach ($extension_array as $bar) {
@@ -66,12 +67,15 @@ foreach ($extension_array as $bar) {
 
 // Check if the extension number passed to the script is a valid system extension
 if (in_array($ext,$ext_list)) {
-	$strChannel = "local/".$ext."@$strContext";;
+****/
+	$strChannel = "local/".$ext."@$strContext";;    // Still need to carry the ext forward, tho
+/**** THIS IS BROKEN IN FreePBX 14 ****
 }
 else {
 	echo "Error. $ext is not a valid extension";
 	exit;
 }
+****/
 
 // Construct an array for dialling
 $dial = array();
